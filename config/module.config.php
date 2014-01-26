@@ -28,4 +28,25 @@ return array(
             'dztask' => __DIR__ . '/../view',
         ),
     ),
+    'controllers' => array(
+        'invokables' => array(
+            'dztask' => 'DzTask\Controller\TaskController',
+        ),
+    ),
+    'router' => array(
+        'routes' => array(
+            'dztask' => array(
+                'type' => 'Literal',
+                'priority' => 1000,
+                'options' => array(
+                    'route' => '/task',
+                    'defaults' => array(
+                        'controller' => 'dztask',
+                        'action' => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+            ),
+        ),
+    ),
 );
