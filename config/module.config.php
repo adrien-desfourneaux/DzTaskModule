@@ -25,23 +25,23 @@ return array(
             'error/index'   => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
-            'dztask' => __DIR__ . '/../view',
+            'dz-task' => __DIR__ . '/../view',
         ),
     ),
     'controllers' => array(
         'invokables' => array(
-            'dztask' => 'DzTask\Controller\TaskController',
+            'dz-task' => 'DzTask\Controller\TaskController',
         ),
     ),
     'router' => array(
         'routes' => array(
-            'dztask' => array(
-                'type' => 'Literal',
+            'dz-task' => array(
+                'type' => 'Segment',
                 'priority' => 1000,
                 'options' => array(
-                    'route' => '/task',
+                    'route' => '/task[/]',
                     'defaults' => array(
-                        'controller' => 'dztask',
+                        'controller' => 'dz-task',
                         'action' => 'index',
                     ),
                 ),
