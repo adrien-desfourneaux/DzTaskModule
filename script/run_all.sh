@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # /*!
-#     Run all scripts in this folder
+#     Lance tous les scripts dans ce répertoire
 #     @author Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
 #  */
 
-# SCRIPTPATH = zf2_app/module/DzProject/script
+# SCRIPTPATH = zf2_app/module/DzTask/script
 SCRIPTPATH=$( cd "$(dirname "$0")" ; pwd -P )
 cd $SCRIPTPATH
 

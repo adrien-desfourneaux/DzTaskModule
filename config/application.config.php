@@ -1,12 +1,12 @@
 <?php
 /**
- * Test application configuration file.
+ * Fichier de configuration de l'application de test.
+ * 
+ * Ce fichier contient uniquement les modules réellement nécéssaires
+ * pour que le module fonctionne.
  *
- * This file contains only the modules really needed for
- * the DzTask module to work.
- *
- * This file should be run either by /public/dz-task.php
- * or /public/test/dz-task.php
+ * Ce fichier devrait être lancé soit par /public/dztask.php
+ * ou /public/dztask.test.php
  *
  * PHP version 5.3.3
  *

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * DzTask configuration
+ * Configuration du module DzTask
  *
  * PHP version 5.3.3
  *
@@ -11,6 +11,16 @@
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
  * @link     https://github.com/dieze/DzTask/blob/master/config/module.config.php
  */
+
+
+/**
+ * Utiliser différentes base de données selon l'environnement (development ou test)
+ */
+if (defined('DZTASK_ENV') && DZTASK_ENV == 'test') {
+    $db_path = __DIR__ . '/../tests/_data/dztask.sqlite';
+} else {
+    $db_path = __DIR__ . '/../data/dztask.sqlite';
+}
 
 return array(
     'view_manager' => array(
@@ -25,28 +35,63 @@ return array(
             'error/index'   => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
-            'dz-task' => __DIR__ . '/../view',
+            'dztask' => __DIR__ . '/../view',
         ),
     ),
     'controllers' => array(
         'invokables' => array(
-            'dz-task' => 'DzTask\Controller\TaskController',
+            'dztask' => 'DzTask\Controller\TaskController',
         ),
     ),
     'router' => array(
         'routes' => array(
-            'dz-task' => array(
+            'dztask' => array(
                 'type' => 'Segment',
                 'priority' => 1000,
                 'options' => array(
-                    'route' => '/task[/]',
+                    'route' => '/dztask[/]',
                     'defaults' => array(
-                        'controller' => 'dz-task',
+                        'controller' => 'dztask',
                         'action' => 'index',
                     ),
                 ),
                 'may_terminate' => true,
+                'child_routes' => array(
+                    'showall' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'show-all[/]',
+                            'defaults' => array(
+                                'controller' => 'dztask',
+                                'action' => 'showall'
+                            ),
+                        ),
+                    ),
+                ),
             ),
         ),
+    ),
+    'doctrine' => array(
+        'driver' => array(
+            'dztask_entity' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'paths' => __DIR__ . '/../src/DzTask/Entity'
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    'DzTask\Entity' => 'dztask_entity'
+                )
+            )
+        ),
+        'connection' => array(
+            'orm_default' => array(
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOSqlite\Driver',
+                'params' => array(
+                    'user' => '',
+                    'password' => '',
+                    'path' => $db_path,
+                )
+            )
+        )
     ),
 );

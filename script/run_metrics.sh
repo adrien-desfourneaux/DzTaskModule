@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # /*!
-#     Run metrics generation for the DzTask module.
+#     Lance la génération des métriques pour le module DzTask
 #     @author Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
 #  */
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # /*!
-#     Run documentation generation for the DzTask module.
+#     Lance la génération de la documentation pour le module DzTask
 #     @author Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
 #  */
 

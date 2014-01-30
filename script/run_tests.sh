@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # /*!
-#     Run all tests for the DzTask module.
+#     Lance tous les tests pour le module DzTask
 #     @author Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
 #  */
 

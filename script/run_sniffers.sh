@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # /*!
-#     Run all sniffers for the DzTask module.
+#     Lance tous les sniffers pour le module DzTask
 #     @author Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
 #  */
 
