@@ -94,7 +94,7 @@ $I->haveInDatabase(
 );
 
 
-$I->amOnPage('/dztask/show-all');
+$I->amOnPage('/task/show-all');
 
 $I->see('Tâches');
 

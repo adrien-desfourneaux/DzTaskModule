@@ -16,7 +16,7 @@
 
 $I = new WebGuy($scenario);
 $I->wantTo('Voir les informations du module');
-$I->amOnPage('/dztask');
+$I->amOnPage('/task');
 
 $I->see('DzTask');
 $I->see('Auteur');

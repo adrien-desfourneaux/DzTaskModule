@@ -45,25 +45,82 @@ return array(
     ),
     'router' => array(
         'routes' => array(
+
+            // Informations du module
             'dztask' => array(
                 'type' => 'Segment',
-                'priority' => 1000,
                 'options' => array(
-                    'route' => '/dztask[/]',
+                    'route' => '/task[/]',
                     'defaults' => array(
                         'controller' => 'dztask',
                         'action' => 'index',
                     ),
                 ),
-                'may_terminate' => true,
+
+                'may_terminate' => 'true',
                 'child_routes' => array(
+
+                    // Ajout d'une tache
+                    'add' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'add[/]',
+                            'defaults' => array(
+                                'action' => 'add',
+                            ),
+                        ),
+                    ),
+
+                    // Suppression d'une tache
+                    'delete' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'delete/:id[/]',
+                            'constraints' => array(
+                                'id' => '\d',
+                            ),
+                            'defaults' => array(
+                                'action' => 'delete',
+                            ),
+                        ),
+                    ),
+
+                    // Changement d'etat d'une tache
+                    'changestate' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'changestate/:state/:id[/]',
+                            'contraints' => array(
+                                'state' => '\d',
+                                'id' => '\d',
+                            ),
+                            'defaults' => array(
+                                'action' => 'changestate',
+                            ),
+                        ),
+                    ),
+
+                    // Fiche tache
+                    'show' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'show/:id[/]',
+                            'constraints' => array(
+                                'id' => '\d'
+                            ),
+                            'defaults' => array(
+                                'action' => 'show'
+                            ),
+                        ),
+                    ),
+
+                    // Affichage de toutes les taches
                     'showall' => array(
                         'type' => 'Segment',
                         'options' => array(
                             'route' => 'show-all[/]',
                             'defaults' => array(
-                                'controller' => 'dztask',
-                                'action' => 'showall'
+                                'action' => 'showall',
                             ),
                         ),
                     ),

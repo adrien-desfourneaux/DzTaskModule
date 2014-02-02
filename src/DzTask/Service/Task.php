@@ -9,7 +9,7 @@
  * @package  DzTask\Service
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Service/TaskService.php
+ * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Service/Task.php
  */
 
 namespace DzTask\Service;
@@ -28,7 +28,7 @@ use DzTask\Options\TaskServiceOptionsInterface;
  * @package  DzTask\Service
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     http://github.com/dieze/DzTask/blob/master/src/DzTask/Service/TaskService.php
+ * @link     http://github.com/dieze/DzTask/blob/master/src/DzTask/Service/Task.php
  * @see      ServiceManagerAwareInterface
  */
 class Task implements ServiceManagerAwareInterface

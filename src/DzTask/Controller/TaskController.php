@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Fichier de source du TaskController
  *
@@ -31,10 +32,10 @@ use DzTask\Service\TaskService;
  */
 class TaskController extends AbstractActionController
 {
-	const ROUTE_SHOWMODULE = 'dztask';
-    const ROUTE_ADD        = 'dztask/add';
-    const ROUTE_DELETE     = 'dztask/delete';
-    const ROUTE_SHOWALL    = 'dztask/showall';
+    const ROUTE_MODULE  = 'dztask';
+    const ROUTE_ADD     = 'dztask/add';
+    const ROUTE_DELETE  = 'dztask/delete';
+    const ROUTE_SHOWALL = 'dztask/showall';
 
     const CONTROLLER_NAME  = 'dztask';
 
@@ -53,8 +54,9 @@ class TaskController extends AbstractActionController
     protected $addForm;
 
     /**
-     * Action par défaut du ProjectController
+     * Action par défaut du TaskController
      * Affiche les informations du module.
+     * ROUTE: /task
      *
      * @return ViewModel
      */
@@ -64,16 +66,44 @@ class TaskController extends AbstractActionController
     }
 
     /**
-     * Traite les données du formulaire d'ajout de projet
+     * Envoie le formulaire d'ajout de tache
+     * Traite en retour les données du formulaire
+     * ROUTE: /task/add
      *
-     * @return null
+     * @return ViewModel
      */
     public function addAction()
     {
+        return new ViewModel();
     }
 
     /**
-     * Affiche un ensemble de taches
+     * Traite les données du formulaire de suppression de tache
+     * ROUTE: /task/delete/:id
+     * GET: id Identifiant de la tache à supprimer
+     *
+     * @return ViewModel
+     */
+    public function deleteAction()
+    {
+        return new ViewModel();
+    }
+
+    /**
+     * Changement d'etat d'une tache
+     * ROUTE: /task/changestate/:state/:id
+     * GET: state Nouvel état de la tache
+     *      id    Identifiant de la tache
+     *
+     * @return null
+     */
+    public function changestateAction()
+    {
+        return null;
+    }
+
+    /**
+     * Affiche toutes les taches
      *
      * @return ViewModel
      */
@@ -88,6 +118,17 @@ class TaskController extends AbstractActionController
                 'tasks' => $tasks
             )
         );
+    }
+
+    /**
+     * Fiche tache
+     * GET: id Identifiant de la tache
+     *
+     * @return ViewModel
+     */
+    public function showAction()
+    {
+        return new ViewModel();
     }
 
     /**
