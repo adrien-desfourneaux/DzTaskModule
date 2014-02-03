@@ -18,8 +18,14 @@
  */
 return array(
     'modules' => array(
+        // Doctrine
         'DoctrineModule',
         'DoctrineORMModule',
+
+        // Gestion des assets
+        'AssetManager',
+
+        // Mon module
         'DzTask'
     ),
     'module_listener_options' => array(
