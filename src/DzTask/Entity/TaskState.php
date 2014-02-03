@@ -50,6 +50,14 @@ class TaskState implements TaskStateInterface
     protected $label;
 
     /**
+     * URL vers l'icone de l'état de tache
+     * @var string
+     *
+     * @ORM\Column(name="icon_url", type="string", length=200)
+     */
+    protected $iconUrl;
+
+    /**
      * Obtient l'id etat de tache.
      *
      * @return integer 
@@ -67,5 +75,15 @@ class TaskState implements TaskStateInterface
     public function getLabel()
     {
         return $this->label;
+    }
+
+    /**
+     * Obtient l'url vers l'icone de l'état de tâche
+     *
+     * @return string
+     */
+    public function getIconUrl()
+    {
+        return $this->iconUrl;
     }
 }

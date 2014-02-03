@@ -39,4 +39,11 @@ interface TaskStateInterface
      * @return string 
      */
     public function getLabel();
+
+    /**
+     * Obtient l'url de l'icone de l'état de tâche
+     *
+     * @return string
+     */
+    public function getIconUrl();
 }
