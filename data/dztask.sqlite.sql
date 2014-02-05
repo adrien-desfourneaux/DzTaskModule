@@ -14,3 +14,8 @@ CREATE TABLE task_state
 	label    VARCHAR(20) NOT NULL UNIQUE,
 	icon_url VARCHAR(200)
 );
+
+INSERT INTO task_state (state_id, label, icon_url) VALUES (1, 'Pas commencé', '/img/DzTask/not-started.png');
+INSERT INTO task_state (state_id, label, icon_url) VALUES (2, 'En cours', '/img/DzTask/in-progress.png');
+INSERT INTO task_state (state_id, label, icon_url) VALUES (3, 'Fait', '/img/DzTask/done.png');
+INSERT INTO task_state (state_id, label, icon_url) VALUES (4, 'En retard', '/img/DzTask/late.png');
