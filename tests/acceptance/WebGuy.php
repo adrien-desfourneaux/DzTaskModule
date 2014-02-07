@@ -7,6 +7,7 @@
 use \Codeception\Maybe;
 use Codeception\Module\Db;
 use Codeception\Module\WebDriver;
+use Codeception\Module\WebHelper;
 
 /**
  * Inherited methods
@@ -2887,6 +2888,50 @@ class WebGuy extends \Codeception\AbstractGuy
      */
     public function appendField($field, $value) {
         $this->scenario->addStep(new \Codeception\Step\Action('appendField', func_get_args()));
+        if ($this->scenario->running()) {
+            $result = $this->scenario->runStep();
+            return new Maybe($result);
+        }
+        return new Maybe();
+    }
+
+ 
+    /**
+     * This method is generated.
+     * Documentation taken from corresponding module.
+     * ----------------------------------------------
+     *
+     * Insère les états de tâches par défaut
+     * dans la base de données
+     *
+     * @return void
+     * @see Codeception\Module\WebHelper::haveDefaultTaskStatesInDatabase()
+     * @return \Codeception\Maybe
+     */
+    public function haveDefaultTaskStatesInDatabase() {
+        $this->scenario->addStep(new \Codeception\Step\Action('haveDefaultTaskStatesInDatabase', func_get_args()));
+        if ($this->scenario->running()) {
+            $result = $this->scenario->runStep();
+            return new Maybe($result);
+        }
+        return new Maybe();
+    }
+
+ 
+    /**
+     * This method is generated.
+     * Documentation taken from corresponding module.
+     * ----------------------------------------------
+     *
+     * Insère les tâches par défaut
+     * dans la base de données
+     *
+     * @return void
+     * @see Codeception\Module\WebHelper::haveDefaultTasksInDatabase()
+     * @return \Codeception\Maybe
+     */
+    public function haveDefaultTasksInDatabase() {
+        $this->scenario->addStep(new \Codeception\Step\Action('haveDefaultTasksInDatabase', func_get_args()));
         if ($this->scenario->running()) {
             $result = $this->scenario->runStep();
             return new Maybe($result);

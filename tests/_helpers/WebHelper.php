@@ -16,7 +16,7 @@
 namespace Codeception\Module;
 
 /**
- * Classe helper pour les tests d'acceptance.
+ * Classe helper pour les tests d'acceptaion.
  * Fonctions personnalisés pour le WebGuy.
  *
  * @category   Test
@@ -28,4 +28,41 @@ namespace Codeception\Module;
  */
 class WebHelper extends \Codeception\Module
 {
+    /**
+     * Insère les états de tâches par défaut
+     * dans la base de données
+     *
+     * @return void
+     */
+    public function haveDefaultTaskStatesInDatabase()
+    {
+        $dbh = $this->getModule('Db')->dbh;
+        $sql = file_get_contents(__DIR__ . '/../../data/dztask.dump.sqlite.sql');
+
+        preg_match_all("/INSERT INTO '?task_state'? .*?;/s", $sql, $matches);
+        $inserts = $matches[0];
+
+        foreach ($inserts as $insert) {
+            $dbh->exec($insert);
+        }
+    }
+
+    /**
+     * Insère les tâches par défaut
+     * dans la base de données
+     *
+     * @return void
+     */
+    public function haveDefaultTasksInDatabase()
+    {
+        $dbh = $this->getModule('Db')->dbh;
+        $sql = file_get_contents(__DIR__ . '/../../data/dztask.dump.sqlite.sql');
+
+        preg_match_all("/INSERT INTO '?task'? .*?;/s", $sql, $matches);
+        $inserts = $matches[0];
+
+        foreach ($inserts as $insert) {
+            $dbh->exec($insert);
+        }
+    }
 }
