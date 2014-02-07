@@ -38,14 +38,6 @@ return array(
             'dztask' => __DIR__ . '/../view',
         ),
     ),
-    // RWOverdijk/AssetManager
-    'asset_manager' => array(
-        'resolver_configs' => array(
-            'paths' => array(
-                __DIR__ . '/../public',
-            ),
-        ),
-    ),
     'controllers' => array(
         'invokables' => array(
             'dztask' => 'DzTask\Controller\TaskController',

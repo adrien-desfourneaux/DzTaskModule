@@ -22,9 +22,6 @@ return array(
         'DoctrineModule',
         'DoctrineORMModule',
 
-        // Gestion des assets
-        'AssetManager',
-
         // Mon module
         'DzTask'
     ),
