@@ -15,7 +15,8 @@
 
 namespace Codeception\Module;
 
-use DzTask\Helper\DbDumper;
+use DzTask\Test\Helper\DbDumper;
+use DzTask\Test\Helper\WebHelperDbInterface;
 
 /**
  * Classe helper pour les tests d'acceptaion.
@@ -28,7 +29,7 @@ use DzTask\Helper\DbDumper;
  * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
  * @link       https://github.com/dieze/DzTask/blob/master/tests/_helpers/WebHelper.php
  */
-class WebHelper extends \Codeception\Module
+class WebHelper extends \Codeception\Module implements WebHelperDbInterface
 {
     /**
      * Insère les états de tâches par défaut

@@ -7,23 +7,23 @@
  * PHP version 5.3.3
  *
  * @category Source
- * @package  DzTask\Helper
+ * @package  DzTask\Test\Helper
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Helper/DbDumper.php
+ * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Test/Helper/DbDumper.php
  */
 
-namespace DzTask\Helper;
+namespace DzTask\Test\Helper;
 
 /**
  * Méthodes d'aide d'insertion de données
  * depuis les fichiers data/*.dump.sqlite.sql
  *
  * @category Source
- * @package  DzTask\Helper
+ * @package  DzTask\Test\Helper
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Helper/DbDumper.php
+ * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/Test/Helper/DbDumper.php
  */
 class DbDumper
 {
@@ -49,7 +49,7 @@ class DbDumper
     public function __construct($dbh)
     {
         $this->dbh = $dbh;
-        $this->dumpFile = __DIR__ . '/../../../data/dztask.dump.sqlite.sql';
+        $this->dumpFile = __DIR__ . '/../../../../data/dztask.dump.sqlite.sql';
     }
 
     /**
