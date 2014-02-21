@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test d'acceptation ShowAllTasks
+ * Test d'acceptation ListAllTasks
  * Afficher toutes les taches.
  *
  * PHP version 5.3.3
@@ -11,7 +11,7 @@
  * @subpackage Acceptance
  * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link       https://github.com/dieze/DzTask/blob/master/tests/acceptance/ShowAllTasksCept.php
+ * @link       https://github.com/dieze/DzTask/blob/master/tests/acceptance/ListAllTasksCept.php
  */
 
 $I = new WebGuy($scenario);
@@ -23,7 +23,7 @@ $I->wantTo('Voir toutes les taches');
 $I->haveDefaultTaskStatesInDatabase();
 $I->haveDefaultTasksInDatabase();
 
-$I->amOnPage('/task/show-all');
+$I->amOnPage('/task/list');
 
 $I->see('Tâches');
 

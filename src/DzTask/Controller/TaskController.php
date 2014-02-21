@@ -35,7 +35,7 @@ class TaskController extends AbstractActionController
     const ROUTE_MODULE  = 'dztask';
     const ROUTE_ADD     = 'dztask/add';
     const ROUTE_DELETE  = 'dztask/delete';
-    const ROUTE_SHOWALL = 'dztask/showall';
+    const ROUTE_LIST    = 'dztask/list';
 
     const CONTROLLER_NAME  = 'dztask';
 
@@ -103,14 +103,13 @@ class TaskController extends AbstractActionController
     }
 
     /**
-     * Affiche toutes les taches
+     * Liste les tâches
      *
      * @return ViewModel
      */
-    public function showallAction()
+    public function listAction()
     {
         $tasks = $this->getTaskService()
-            ->getTaskMapper()
             ->findAll();
 
         return new ViewModel(

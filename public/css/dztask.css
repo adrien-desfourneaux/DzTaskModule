@@ -1,0 +1,7 @@
+.state {
+    width: 30px;
+}
+
+.entry td {
+	vertical-align: middle !important; /* override bootstrap */
+}

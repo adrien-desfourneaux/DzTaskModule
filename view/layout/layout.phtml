@@ -20,7 +20,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('DzTask')->setSeparator(' - ')->setAutoEscape(false) ?>
 
 <?php
 echo $this->headMeta()
@@ -32,8 +32,9 @@ echo $this->headMeta()
 <?php
 echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
     ->prependStylesheet($this->basePath() . '/css/style.css')
-    ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+    ->prependStylesheet($this->basePath() . '/css/dztask.css')
     ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+    ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css');
 ?>
 
 <!-- Scripts -->
@@ -60,7 +61,7 @@ echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.micros
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<?php echo $this->url('dztask') ?>">Informations du module</a></li>
                         <li class="active"><a href="<?php echo $this->url('dztask/add') ?>">Ajout d'une taches</a></li>
-                        <li class="active"><a href="<?php echo $this->url('dztask/showall') ?>">Afficher les tâches</a></li>
+                        <li class="active"><a href="<?php echo $this->url('dztask/list') ?>">Listing des tâches</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

@@ -76,9 +76,9 @@ class Module implements
     {
         return array(
             'factories' => array(
-                'dzTaskShowAllWidget' => function ($sm) {
+                'dzTaskListWidget' => function ($sm) {
                     $locator = $sm->getServiceLocator();
-                    $viewHelper = new View\Helper\DzTaskShowAllWidget;
+                    $viewHelper = new View\Helper\DzTaskListWidget;
                     $viewHelper->setTaskService($locator->get('dztask_task_service'));
                     return $viewHelper;
                 },
@@ -99,8 +99,8 @@ class Module implements
         return array(
             'invokables' => array(
                 'dztask_task_service' => 'DzTask\Service\Task',
-                'dztask_task_hydrator' => 'Zend\Stdlib\Hydrator\ClassMethods'
             ),
+            
             'factories' => array(
 
                 'dztask_module_options' => function ($sm) {
@@ -113,6 +113,18 @@ class Module implements
                     $entityManager = $sm->get('doctrine.entitymanager.orm_default');
                     $entityClass = $options->getTaskEntityClass();
                     return new Mapper\Task($entityManager, $entityClass);
+                },
+
+                'dztask_task_hydrator' => function ($serviceManager) {
+                    $hydrator = new \Zend\Stdlib\Hydrator\ClassMethods();
+
+                    // extraction
+                    $hydrator->addStrategy('state', new Hydrator\Strategy\TaskStateAssocation);
+
+                    // hydratation
+                    //$hydrator->addStrategy('state', new Hydrator\Strategy\TaskStateAssocation);
+
+                    return $hydrator;
                 },
             ),
         );

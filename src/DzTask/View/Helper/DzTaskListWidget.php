@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Fichier de source du DzTaskShowAllWidget
+ * Fichier de source du DzTaskListWidget
  * Widget qui affiche toutes les tâches
  *
  * PHP version 5.3.3
@@ -10,7 +10,7 @@
  * @package  DzTask\View\Helper
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/View/Helper/DzTaskShowAllWidget.php
+ * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/View/Helper/DzTaskListWidget.php
  */
 
 namespace DzTask\View\Helper;
@@ -20,15 +20,15 @@ use Zend\View\Helper\AbstractHelper;
 use Zend\View\Model\ViewModel;
 
 /**
- * Widget d'affichage de toutes les tâches
+ * Widget de listing des tâches
  *
  * @category Source
  * @package  DzTask\View\Helper
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/View/Helper/DzTaskShowAllWidget.php
+ * @link     https://github.com/dieze/DzTask/blob/master/src/DzTask/View/Helper/DzTaskListWidget.php
  */
-class DzTaskShowAllWidget extends AbstractHelper
+class DzTaskListWidget extends AbstractHelper
 {
     /**
      * $var string template used for view
@@ -62,7 +62,7 @@ class DzTaskShowAllWidget extends AbstractHelper
             )
         );
 
-        $viewModel->setTemplate('dz-task/task/showall.phtml');
+        $viewModel->setTemplate('dz-task/task/list.phtml');
         if ($render) {
             return $this->getView()->render($viewModel);
         } else {
@@ -75,7 +75,7 @@ class DzTaskShowAllWidget extends AbstractHelper
      *
      * @param Service\Task $taskService Nouveau service pour les tâches
      *
-     * @return DzTaskShowAllWidget
+     * @return DzTaskListWidget
      */
     public function setTaskService($taskService)
     {

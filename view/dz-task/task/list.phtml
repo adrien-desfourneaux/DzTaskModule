@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Vue pour l'action TaskController::listAction()
+ *
+ * PHP version 5
+ *
+ * @category   Source
+ * @package    DzTask
+ * @subpackage View
+ * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
+ * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
+ * @link       https://github.com/dieze/DzTask/blob/master/view/dz-task/task/list.phtml
+ */
+
+?>
+
+<?php $this->headTitle('Tâches'); ?>
+
+<h1>Tâches</h1>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Période</th>
+                <th>Etat</th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+foreach ($tasks as $t) {
+    ?>
+            <tr class="<?php echo $t->getState()->getLabel(); ?> entry">
+                <td>
+                    <?php echo $t->getDescription(); ?>
+                </td>
+                <td>
+                    <?php echo strftime("%d/%m/%Y", $t->getBeginDate()) . ' - ' . strftime("%d/%m/%Y", $t->getEndDate()); ?></td>
+                </td>
+                <td>
+                    <img class="state <?php echo $t->getState()->getLabel(); ?>" src="<?php echo $t->getState()->getIconUrl(); ?>" alt="<?php echo $t->getState()->getLabel(); ?>"/>
+                </td>
+            </tr>
+    <?php
+}
+?>
+        </tbody>
+    </table>
+</div>

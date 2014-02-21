@@ -3,7 +3,7 @@
 /**
  * Fichier de source de l'entité etat de tache
  *
- * PHP version 5.3.3
+ * PHP version 5.4.0
  *
  * @category Source
  * @package  DzTask\Entity
@@ -15,7 +15,6 @@
 namespace DzTask\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Zend\Stdlib\Exception;
 
 /**
  * Etat de tache
@@ -31,59 +30,5 @@ use Zend\Stdlib\Exception;
  */
 class TaskState implements TaskStateInterface
 {
-    /**
-     * Identifiant de l'etat de la tache.
-     * @var integer
-     *
-     * @ORM\Column(name="state_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    protected $stateId;
-
-    /**
-     * Etiquette de l'etat de la tache.
-     * @var string
-     *
-     * @ORM\Column(name="label", type="string", length=20, unique=true, nullable=false)
-     */
-    protected $label;
-
-    /**
-     * URL vers l'icone de l'état de tache
-     * @var string
-     *
-     * @ORM\Column(name="icon_url", type="string", length=200)
-     */
-    protected $iconUrl;
-
-    /**
-     * Obtient l'id etat de tache.
-     *
-     * @return integer 
-     */
-    public function getStateId()
-    {
-        return $this->stateId;
-    }
-
-    /**
-     * Obtient l'etiquette de l'etat de tache
-     *
-     * @return string 
-     */
-    public function getLabel()
-    {
-        return $this->label;
-    }
-
-    /**
-     * Obtient l'url vers l'icone de l'état de tâche
-     *
-     * @return string
-     */
-    public function getIconUrl()
-    {
-        return $this->iconUrl;
-    }
+    use TaskStateTrait;
 }

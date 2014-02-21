@@ -5,7 +5,7 @@
  *
  * PHP version 5.3.3
  *
- * @category Interface
+ * @category Source
  * @package  DzTask\Entity
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
@@ -34,16 +34,16 @@ interface TaskInterface
     public function getTaskId();
 
     /**
-     * Définit la description.
+     * Définit la description de la tache.
      *
      * @param string $description Nouvelle description
      *
-     * @return Task
+     * @return TaskInterface
      */
     public function setDescription($description);
 
     /**
-     * Obtient la description.
+     * Obtient la description de la tache
      *
      * @return string 
      */
@@ -54,7 +54,7 @@ interface TaskInterface
      *
      * @param integer $beginDate Nouvelle date de début
      *
-     * @return Task
+     * @return TaskInterface
      */
     public function setBeginDate($beginDate);
 
@@ -70,7 +70,7 @@ interface TaskInterface
      *
      * @param integer $endDate Nouvelle date de fin
      *
-     * @return Task
+     * @return TaskInterface
      */
     public function setEndDate($endDate);
 
@@ -86,11 +86,11 @@ interface TaskInterface
      *
      * @param integer $stateId Nouvel identifiant de l'etat de la tache
      *
-     * @return Task
+     * @return TaskInterface
      */
     public function setStateId($stateId);
 
-     /**
+    /**
      * Obtient l'identifiant de l'etat de la tache
      *
      * @return integer
@@ -100,7 +100,7 @@ interface TaskInterface
     /**
      * Obtient l'etat de la tache
      *
-     * @return TaskState
+     * @return TaskStateInterface
      */
     public function getState();
 }

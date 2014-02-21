@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Interface pour l'entité etat de tache
+ * Interface pour l'entité état de tâche
  *
  * PHP version 5.3.3
  *
- * @category Interface
+ * @category Source
  * @package  DzTask\Entity
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
@@ -15,7 +15,7 @@
 namespace DzTask\Entity;
 
 /**
- * Interface pour l'entité etat de tache
+ * Interface pour l'entité état de tâche
  *
  * @category Source
  * @package  DzTask\Entity
@@ -41,7 +41,7 @@ interface TaskStateInterface
     public function getLabel();
 
     /**
-     * Obtient l'url de l'icone de l'état de tâche
+     * Obtient l'url vers l'icone de l'état de tâche
      *
      * @return string
      */

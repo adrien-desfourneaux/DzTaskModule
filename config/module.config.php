@@ -60,6 +60,17 @@ return array(
                 'may_terminate' => 'true',
                 'child_routes' => array(
 
+                    // Listing des taches
+                    'list' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'list[/]',
+                            'defaults' => array(
+                                'action' => 'list',
+                            ),
+                        ),
+                    ),
+
                     // Ajout d'une tache
                     'add' => array(
                         'type' => 'Segment',
@@ -110,17 +121,6 @@ return array(
                             ),
                             'defaults' => array(
                                 'action' => 'show'
-                            ),
-                        ),
-                    ),
-
-                    // Affichage de toutes les taches
-                    'showall' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => 'show-all[/]',
-                            'defaults' => array(
-                                'action' => 'showall',
                             ),
                         ),
                     ),

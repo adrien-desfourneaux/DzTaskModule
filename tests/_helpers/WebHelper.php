@@ -3,7 +3,7 @@
 /**
  * Aides pour les tests d'acceptation
  * 
- * PHP version 5.3.3
+ * PHP version 5.4.0
  *
  * @category   Test
  * @package    DzTask
@@ -15,8 +15,7 @@
 
 namespace Codeception\Module;
 
-use DzTask\Test\Helper\DbDumper;
-use DzTask\Test\Helper\WebHelperDbInterface;
+use DzTask\Test\Helper\WebHelperDbTrait;
 
 /**
  * Classe helper pour les tests d'acceptaion.
@@ -29,31 +28,7 @@ use DzTask\Test\Helper\WebHelperDbInterface;
  * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
  * @link       https://github.com/dieze/DzTask/blob/master/tests/_helpers/WebHelper.php
  */
-class WebHelper extends \Codeception\Module implements WebHelperDbInterface
+class WebHelper extends \Codeception\Module
 {
-    /**
-     * Insère les états de tâches par défaut
-     * dans la base de données
-     *
-     * @return void
-     */
-    public function haveDefaultTaskStatesInDatabase()
-    {
-        $dbh = $this->getModule('Db')->dbh;
-        $dbDumper = new DbDumper($dbh);
-        $dbDumper->insertTaskStates();
-    }
-
-    /**
-     * Insère les tâches par défaut
-     * dans la base de données
-     *
-     * @return void
-     */
-    public function haveDefaultTasksInDatabase()
-    {
-        $dbh = $this->getModule('Db')->dbh;
-        $dbDumper = new DbDumper($dbh);
-        $dbDumper->insertTasks();
-    }
+    use WebHelperDbTrait;
 }
