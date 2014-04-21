@@ -1,0 +1,217 @@
+<?php
+
+/**
+ * Vue pour l'action TaskController::indexAction()
+ * Affiche la documentation du module
+ *
+ * PHP version 5
+ *
+ * @category   Source
+ * @package    DzTask
+ * @subpackage View
+ * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
+ */
+
+?>
+
+<h1>DzTaskModule</h1>
+
+<p>DzTaskModule est un module de gestion de tâches pour ZF2, compatible Doctrine. Il est écrit et maintenu par Adrien Desfourneaux (aka Dieze) &lt;dieze51@gmail.com&gt;. Le projet est hébergé par GitHub à l'adresse <a href="https://github.com/dieze/DzTaskModule.git">https://github.com/dieze/DzTaskModule.git</a></p>
+
+<h2>Fonctionnalités</h2>
+
+Le module gère :
+<ul>
+	<li><a href="<?php echo $this->url('dztask/add'); ?>">l'ajout de tâche (/task/add)</a></li>
+    <li><a href="<?php echo $this->url('dztask/delete', array('id' => '1')); ?>">la suppression d'une tâche (/task/delete/:id)</a></li>
+    <li><a href="<?php echo $this->url('dztask/changestate', array('id' => '1')); ?>">le changement d'état d'une tâche (/task/changestate/:id)</a></li>
+	<li><a href="<?php echo $this->url('dztask/list'); ?>">le listing de toutes les tâches (/task/list)</a></li>
+</ul>
+
+<p>L'aide de vue <em>DzTaskAddWidget</em> permet d'intégrer l'affichage du formulaire d'ajout de tâche à un template de vue existant. Les options <em>redirectSuccess</em> et <em>redirectFailure</em> définissent respectivement l'url de redirection en cas de succès ou d'échec. L'option <em>hasTitle</em> permet d'afficher ou non le titre. Aussi, l'option <em>hasSubmit</em> permet d'afficher ou non le bouton d'envoi du formulaire. Cela peut-être utile si l'on veut mettre le widget dans une fenêtre Modal Bootstrap, avec un bouton en footer de la fenêtre qui activera le submit.</p>
+
+<ul class="widget-examples">
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskAddWidget();
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskAddWidget();
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskAddWidget(
+    array(
+        'redirectSuccess' => $this->url(),
+        'redirectFailure' => $this->url()
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskAddWidget(
+                array(
+                    'redirectSuccess' => $this->url(),
+                    'redirectFailure' => $this->url(),
+                )
+            );
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskAddWidget(
+    array(
+        'hasTitle' => false
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskAddWidget(
+                array(
+                    'hasTitle' => false
+                )
+            );
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskAddWidget(
+    array(
+        'hasSubmit' => false
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskAddWidget(
+                array(
+                    'hasSubmit' => false
+                )
+            );
+            ?>
+        </div>
+    </li>
+</ul>
+
+<p>L'aide de vue <em>DzTaskChangestateWidget</em> permet d'intégrer l'affichage du changement d'état d'une tâche à un template de vue existant. Le paramètre <em>id</em> est obligatoire et définit l'identifiant de la tâche à modifier. Les options <em>redirectSuccess</em> et <em>redirectFailure</em> définissent respectivement l'url de redirection en cas de succès ou d'échec. L'option <em>hasTitle</em> permet d'afficher ou non le titre. Aussi, l'option <em>hasSubmit</em> permet d'afficher ou non le bouton d'envoi du formulaire.</p>
+
+<ul class="widget-examples">
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskChangestateWidget(
+    array(
+        'id' => 1,
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskChangestateWidget(
+                array(
+                    'id' => 1
+                )
+            );
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskChangestateWidget(
+    array(
+        'id'              => 2,
+        'redirectSuccess' => $this->url(),
+        'redirectFailure' => $this->url()
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskChangestateWidget(
+                array(
+                    'id'              => 2,
+                    'redirectSuccess' => $this->url(),
+                    'redirectFailure' => $this->url(),
+                )
+            );
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskChangestateWidget(
+    array(
+        'id'       => 3,
+        'hasTitle' => false
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskChangestateWidget(
+                array(
+                    'id'       => 3,
+                    'hasTitle' => false
+                )
+            );
+            ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskChangestateWidget(
+    array(
+        'id'        => 4,
+        'hasSubmit' => false
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskChangestateWidget(
+                array(
+                    'id'        => 4,
+                    'hasSubmit' => false
+                )
+            );
+            ?>
+        </div>
+    </li>
+</ul>
+
+<p>L'aide de vue <em>DzTaskListWidget</em> permet d'intégrer le listing de toutes les tâches à un template de vue existant. Aussi, l' option <em>hasTitle</em> permet ou non d'afficher le titre.</p>
+
+<ul class="widget-examples">
+    <li><pre>&lt;?php
+echo $this->dzTaskListWidget();
+?&gt;</pre>
+        <div class="widget-container">
+            <?php echo $this->dzTaskListWidget(); ?>
+        </div>
+    </li>
+    <li>
+        <pre>&lt;?php
+echo $this->dzTaskListWidget(
+    array(
+        'hasTitle' => false
+    )
+);
+?&gt;</pre>
+        <div class="widget-container">
+            <?php
+            echo $this->dzTaskListWidget(
+                array(
+                    'hasTitle' => false
+                )
+            );
+            ?>
+        </div>
+    </li>
+</ul>

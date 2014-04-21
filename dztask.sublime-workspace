@@ -1,0 +1,546 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"haveDe",
+				"haveDefaultTasksInDatabase"
+			],
+			[
+				"haveDef",
+				"haveDefaultTaskStatesInDatabase"
+			],
+			[
+				"tas",
+				"tasksExtracted"
+			],
+			[
+				"Doctrin",
+				"DoctrineEntityService"
+			],
+			[
+				"TaskState",
+				"TaskStatesNotFound"
+			],
+			[
+				"TaskS",
+				"TaskStateAssociationStrategy"
+			],
+			[
+				"stat",
+				"stateStrategy"
+			],
+			[
+				"state",
+				"TaskStateAssociationStrategy"
+			],
+			[
+				"failed",
+				"failedChangestateMessage"
+			],
+			[
+				"prep",
+				"prependStylesheets"
+			],
+			[
+				"ServiceLocator",
+				"ServiceLocatorAwareInterface"
+			],
+			[
+				"EventManager",
+				"EventManagerAwareInterface"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/bin/db.sh",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/bin/qa.sh",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/.bowerrc",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/bower.json",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/.gitignore",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/.gitignore",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/bower.json",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/dztask.sublime-project",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/css/dztask.css",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/.bowerrc",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/composer.json",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/list.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskMappedSuperclass.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskStateMappedSuperclass.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Test/Helper/DbWebHelper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/_helpers/WebHelper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance/ChangestateCept.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskState.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/Task.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Test/Helper/DbWebHelperInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/Vagrantfile",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/hiera.yaml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Controller/TaskController.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Model/ListViewModel.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Controller/Factory/TaskControllerFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Info/NoTask.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/Module.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Model/ChangestateViewModel.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/changestate.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/NoTask.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/index.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/qa.sh",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/config/application.config.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/config/module.config.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/spec/DzTaskModule/Entity/TaskSpec.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/spec/DzTaskModule/Entity/TaskStateSpec.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/_bootstrap.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/_helpers/CodeHelper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/_helpers/TestHelper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance/_bootstrap.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance/ListAllTasksCept.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/functional/_bootstrap.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/unit/_bootstrap.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/add.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/show.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/error/404.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/error/index.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/layout/layout.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/dztask.sublime-workspace",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskStateInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskStateTrait.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Entity/TaskTrait.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/ModuleOptions.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/TaskControllerOptionsInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/TaskListOptionsInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/TaskServiceOptionsInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/TaskStateServiceOptionsInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Options/TaskWidgetsOptionsInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Test/Helper/Db.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Test/Helper/WebHelperDbTrait.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/AddWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/ChangestateWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/ListWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/js/iconselect.js",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/data/dztask.dump.sqlite.sql",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Hydrator/Factory/TaskHydratorFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Listing/TaskListing.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskMapper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/TaskService.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/Factory/TaskServiceFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskStateMapper.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskMapperInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskStateMapperInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Factory/TaskMapperFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Factory/TaskStateMapperFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Model/ChangestateViewModel",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/DeleteWidgetFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/DeleteWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/data/dztask.sqlite.sql",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance/DeleteTaskCept.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance/AddTaskCept.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/LICENSE",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Listing/Field.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Model/DeleteViewModel.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Listener/DefaultTaskStateListener.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/TaskStateService.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/Factory/TaskStateServiceFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Hydrator/TaskStateHydrator.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/delete.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Model/AddViewModel.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Listener/AddTaskListener.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/TaskNotFound.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/TaskStateNotFound.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/TasksNotFound.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/ListWidgetFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/AddWidgetFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/ChangestateFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/ChangestateWidgetFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Hydrator/TaskHydrator.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/InputFilter/AddInputFilter.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Form/AddFilter.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/Factory/DzTaskAddWidgetFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Form/Factory/AddFormFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/TaskChangestateFailed.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Message/Error/TaskStatesNotFound.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Factory/SessionContainerFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Factory/ModuleOptionsFactory.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Form/AddForm.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Hydrator/Strategy/TaskStateAssociationStrategy.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/DzTaskAddWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/DzTaskChangestateWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/DzTaskListWidget.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Controller/Plugin/DzTaskError.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/config/dztask.global.php.dist",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/Task.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/Task.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskState.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/AppendScripts.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/View/Helper/PrependStylesheets.php",
+		"/Users/adrien/Desktop/list.save.phtml",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Mapper/TaskStateInterface.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Service/TaskState.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/view/dz-task-module/task/iconselect.js",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/public/js/dztask/bmi.js",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule/Form/Add.php",
+		"/Users/adrien/Documents/Suivi-Projet/suivi-projet/vendor/zf-commons/zfc-user/src/ZfcUser/Form/Register.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/tests/acceptance",
+			"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule",
+			"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule/src/DzTaskModule",
+			"/Users/adrien/Documents/Suivi-Projet/suivi-projet/module/DzTaskModule"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cdscriptpath",
+			"haveAllDefaults",
+			"DzProjectModule",
+			"Error",
+			"DzMessageModule",
+			"https\\:\\/\\/github.com\\/dieze\\/DzTaskModule\\/blob\\/.*",
+			"blob",
+			"\\/blob\\/master\\/src\\/DzTaskModule.*$",
+			"\\/blob.*$",
+			"/blob.*$",
+			"blob",
+			"* @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2",
+			"dztask",
+			"DeleteTask",
+			"TaskStateMapper",
+			"changestate",
+			"projet",
+			"TaskMapper",
+			"url",
+			"AddViewModel",
+			"Task",
+			"$Task",
+			"projet",
+			"Project",
+			"tâche",
+			"projet",
+			"Project",
+			"Projet",
+			"du projet",
+			"un projet",
+			"Le projet",
+			"Nouveau projet",
+			"display_name",
+			"project",
+			"Project",
+			"tâche",
+			"un tâche",
+			"projet",
+			"project",
+			"Project",
+			"project",
+			"projet",
+			"Project",
+			"project",
+			"projet",
+			"Project",
+			"project",
+			"du projet",
+			"le projet",
+			"un projet",
+			"projet",
+			"proje",
+			"project",
+			"le projet",
+			"un projet",
+			"Project",
+			"project",
+			"projet",
+			"Project",
+			"projet",
+			"project",
+			"Project",
+			"AddViewModel",
+			"modUle",
+			"AddViewModel",
+			"show",
+			"DzTaskStateModule",
+			"Task",
+			"projet",
+			"Task",
+			"TaskState",
+			"getServicesConfig",
+			"TaskAddListener",
+			"DzService",
+			"Project",
+			"Form",
+			"Project",
+			"getTaskEntityClass",
+			"Project",
+			"DzTaskStatesModule",
+			"DzTaskStateModule",
+			"Delete",
+			"Project",
+			"DzProject",
+			"TaskState",
+			"Task",
+			"Project",
+			"DzProject",
+			"AddWidget",
+			"project",
+			"projet",
+			"DzProjectModule",
+			"DzTaskListWidget",
+			"DzTaskChangestateWidget",
+			"DzTaskAddWidget",
+			"project",
+			"projet",
+			"DzProjectModule",
+			"abstr",
+			"AbstractWidget",
+			"La désignation",
+			"projet",
+			"Project",
+			"changestateAction",
+			"getUseRedirectParameterIfPresent",
+			"useRedirectParameterIfPresent",
+			"getUseRedirectParameterIfPresent",
+			"getuseRedirect",
+			"$addForm",
+			"Project",
+			"getAddForm",
+			"failedChangestate",
+			"params\\(\\)",
+			"deleteAction",
+			"render",
+			"isWidget",
+			"getRequest",
+			"DzTaskModuleListWidget",
+			"taskStates",
+			"viewTemplate",
+			"dzproject",
+			"tache",
+			">",
+			"setenv",
+			"Hydrator",
+			"Stdlib",
+			"HydratorInterface",
+			"Task"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"cdmodulepath",
+			"DzTaskModule",
+			"Info",
+			"DzTaskModule",
+			"https://github.com/dieze/DzTaskModule",
+			"",
+			"* @license    http://www.opensource.org/licenses/mit-license.html  MIT License",
+			"Changestate",
+			"TaskStateMapper",
+			"ChangestateViewModel",
+			"tâche",
+			"Task",
+			"tâche",
+			"Task",
+			"Tâche",
+			"de la tâche",
+			"une tâche",
+			"La tâche",
+			"Nouvelle tâche",
+			"description",
+			"task",
+			"Task",
+			"une tâche",
+			"tâche",
+			"task",
+			"Task",
+			"task",
+			"tâche",
+			"Task",
+			"task",
+			"tâche",
+			"Task",
+			"task",
+			"de la tâche",
+			"la tâche",
+			"une tâche",
+			"task",
+			"la tâche",
+			"une tâche",
+			"Task",
+			"task",
+			"tâche",
+			"Task",
+			"tâche",
+			"task",
+			"Task",
+			"ListViewModel",
+			"Module",
+			"ListViewModel",
+			"DzTaskModule",
+			"TaskState",
+			"TaskStateService",
+			"DefaultTaskStateListener",
+			"DzTask",
+			"Task",
+			"DzTaskModule",
+			"Changestate",
+			"Task",
+			"DzTask",
+			"TaskStates",
+			"TaskState",
+			"Task",
+			"DzTask",
+			"ListWidget",
+			"ChangestateWidget",
+			"task",
+			"tâche",
+			"DzTaskModule",
+			"ListWidget",
+			"ChangestateWidget",
+			"AddWidget",
+			"task",
+			"tâche",
+			"DzTaskModule",
+			"tâche",
+			"Task",
+			"DzTaskListWidget",
+			"tâche",
+			"task",
+			"Task",
+			"tâche",
+			"task",
+			"Task",
+			"tâche",
+			"Task",
+			"tâche",
+			"task",
+			"Task",
+			"task",
+			"tâche",
+			"Task",
+			"tâche",
+			"task",
+			"Task"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true
+}

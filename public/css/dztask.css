@@ -1,7 +1,41 @@
+.widget-examples {
+    list-style-type: none;
+}
+
+.widget-examples > li {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid black;
+    border-radius: 0 0 5px 5px;
+}
+
+.widget-container {
+    padding: 10px;
+}
+
 .state {
     width: 30px;
 }
 
 .entry td {
 	vertical-align: middle !important; /* override bootstrap */
+}
+
+body > .container {
+	margin-top: 50px;
+}
+
+
+.deleteAction img {
+    width: 20px;
+}
+
+.icon-select {
+	float:left;
+}
+
+.changestateForm {
+	float:left;
+	margin-top: 20px;
+	margin-left: 10px;
 }

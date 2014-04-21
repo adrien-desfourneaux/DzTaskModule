@@ -10,8 +10,8 @@
  * @package    DzTask
  * @subpackage Acceptance
  * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
- * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link       https://github.com/dieze/DzTask/blob/master/tests/acceptance/ListAllTasksCept.php
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
  */
 
 $I = new WebGuy($scenario);

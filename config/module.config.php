@@ -9,9 +9,8 @@
  * @package  DzTask
  * @author   Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
  * @license  http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link     https://github.com/dieze/DzTask/blob/master/config/module.config.php
+ * @link     https://github.com/dieze/DzTaskModule
  */
-
 
 /**
  * Utiliser différentes base de données selon l'environnement (development ou test)
@@ -38,11 +37,6 @@ return array(
             'dztask' => __DIR__ . '/../view',
         ),
     ),
-    'controllers' => array(
-        'invokables' => array(
-            'dztask' => 'DzTask\Controller\TaskController',
-        ),
-    ),
     'router' => array(
         'routes' => array(
 
@@ -59,17 +53,6 @@ return array(
 
                 'may_terminate' => 'true',
                 'child_routes' => array(
-
-                    // Listing des taches
-                    'list' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => 'list[/]',
-                            'defaults' => array(
-                                'action' => 'list',
-                            ),
-                        ),
-                    ),
 
                     // Ajout d'une tache
                     'add' => array(
@@ -88,10 +71,21 @@ return array(
                         'options' => array(
                             'route' => 'delete/:id[/]',
                             'constraints' => array(
-                                'id' => '\d',
+                                'id' => '\d+',
                             ),
                             'defaults' => array(
                                 'action' => 'delete',
+                            ),
+                        ),
+                    ),
+
+                    // Listing des taches
+                    'list' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => 'list[/]',
+                            'defaults' => array(
+                                'action' => 'list',
                             ),
                         ),
                     ),
@@ -100,27 +94,12 @@ return array(
                     'changestate' => array(
                         'type' => 'Segment',
                         'options' => array(
-                            'route' => 'changestate/:state/:id[/]',
+                            'route' => 'changestate/:id[/]',
                             'contraints' => array(
-                                'state' => '\d',
                                 'id' => '\d',
                             ),
                             'defaults' => array(
                                 'action' => 'changestate',
-                            ),
-                        ),
-                    ),
-
-                    // Fiche tache
-                    'show' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => 'show/:id[/]',
-                            'constraints' => array(
-                                'id' => '\d'
-                            ),
-                            'defaults' => array(
-                                'action' => 'show'
                             ),
                         ),
                     ),
@@ -132,11 +111,11 @@ return array(
         'driver' => array(
             'dztask_entity' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                'paths' => __DIR__ . '/../src/DzTask/Entity'
+                'paths' => __DIR__ . '/../src/DzTaskModule/Entity'
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'DzTask\Entity' => 'dztask_entity'
+                    'DzTaskModule\Entity' => 'dztask_entity'
                 )
             )
         ),

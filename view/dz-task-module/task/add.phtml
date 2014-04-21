@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Vue pour l'action TaskController::addAction()
+ * Ajout d'une nouvelle tache
+ *
+ * PHP version 5
+ *
+ * @category   Source
+ * @package    DzTask
+ * @subpackage View
+ * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
+ */
+
+?>
+
+<?php
+
+$this->includeAssets();
+$this->setHeadTitle("Ajout d'une tâche");
+
+echo $this->renderDatePickerJs();
+
+echo $this->renderTitle("Ajout d'une tâche");
+
+echo $this->renderFormOpenTag();
+
+?>
+
+    <fieldset>
+
+        <?php
+
+        echo $this->renderFormGroup('description');
+        echo $this->renderFormGroup('beginDate');
+        echo $this->renderFormGroup('endDate');
+
+        echo $this->renderRedirectSuccess();
+        echo $this->renderRedirectFailure();
+        echo $this->renderHiddenElements();
+
+        echo $this->renderSubmit();
+
+        ?>
+            
+    </fieldset>
+
+</form>

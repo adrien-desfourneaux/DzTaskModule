@@ -1,0 +1,16 @@
+{
+  "name": "dz-task-module",
+  "version": "0.0.1",
+  "main": "css/dztask.css",
+  "ignore": [
+    "*.php"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0",
+    "bootstrap-calendar": "~0.2",
+    "iconselect.js": "https://github.com/bug7a/iconselect.js.git#master"
+  },
+  "resolutions": {
+    "bootstrap": "~3.0"
+  }
+}

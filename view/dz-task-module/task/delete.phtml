@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Vue pour l'action TaskController::deleteAction()
+ * Suppression d'une tâche
+ *
+ * PHP version 5
+ *
+ * @category   Source
+ * @package    DzTaskModule
+ * @subpackage View
+ * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
+ */
+
+?>
+
+<?php
+
+$task        = $this->task;
+$description = $task['description'];
+
+$this->setHeadTitle("Suppression d'une tâche");
+echo $this->renderTitle("Suppression d'une tâche");
+
+echo $this->renderFormOpenTag();
+
+?>
+
+<p>
+	Voulez-vous vraiment supprimer la tâche
+	
+	<?php
+	echo $description;
+	?>
+
+	?
+</p>
+
+<?php
+
+echo $this->renderRedirect();
+echo $this->renderSubmit();
+
+?>
+</form>

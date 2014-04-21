@@ -5,7 +5,7 @@ INSERT INTO task_state (
 ) VALUES (
     1,
     'not-started',
-    '/img/DzTask/not-started.png'
+    '/img/dztask/not-started.png'
 );
 
 INSERT INTO task_state (
@@ -15,7 +15,7 @@ INSERT INTO task_state (
 ) VALUES (
     2,
     'in-progress',
-    '/img/DzTask/in-progress.png'
+    '/img/dztask/in-progress.png'
 );
 
 INSERT INTO task_state (
@@ -25,7 +25,7 @@ INSERT INTO task_state (
 ) VALUES (
     3,
     'done',
-    '/img/DzTask/done.png'
+    '/img/dztask/done.png'
 );
 
 INSERT INTO task_state (
@@ -35,7 +35,7 @@ INSERT INTO task_state (
 ) VALUES (
     4,
     'late',
-    '/img/DzTask/late.png'
+    '/img/dztask/late.png'
 );
 
 /* --------------------  */

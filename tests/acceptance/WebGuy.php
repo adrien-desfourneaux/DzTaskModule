@@ -2901,10 +2901,7 @@ class WebGuy extends \Codeception\AbstractGuy
      * Documentation taken from corresponding module.
      * ----------------------------------------------
      *
-     * Insère les états de tâches par défaut
-     * dans la base de données
-     *
-     * @return void
+     * {@inheritdoc}
      * @see Codeception\Module\WebHelper::haveDefaultTaskStatesInDatabase()
      * @return \Codeception\Maybe
      */
@@ -2923,10 +2920,7 @@ class WebGuy extends \Codeception\AbstractGuy
      * Documentation taken from corresponding module.
      * ----------------------------------------------
      *
-     * Insère les tâches par défaut
-     * dans la base de données
-     *
-     * @return void
+     * {@inheritdoc}
      * @see Codeception\Module\WebHelper::haveDefaultTasksInDatabase()
      * @return \Codeception\Maybe
      */
@@ -2945,15 +2939,12 @@ class WebGuy extends \Codeception\AbstractGuy
      * Documentation taken from corresponding module.
      * ----------------------------------------------
      *
-     * Définit tout par défaut
-     * dans la base de données
-     *
-     * @return void
-     * @see Codeception\Module\WebHelper::haveAllDefaultsInDatabase()
+     * {@inheritdoc}
+     * @see Codeception\Module\WebHelper::haveAllTaskDefaultsInDatabase()
      * @return \Codeception\Maybe
      */
-    public function haveAllDefaultsInDatabase() {
-        $this->scenario->addStep(new \Codeception\Step\Action('haveAllDefaultsInDatabase', func_get_args()));
+    public function haveAllTaskDefaultsInDatabase() {
+        $this->scenario->addStep(new \Codeception\Step\Action('haveAllTaskDefaultsInDatabase', func_get_args()));
         if ($this->scenario->running()) {
             $result = $this->scenario->runStep();
             return new Maybe($result);

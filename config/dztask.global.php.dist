@@ -2,19 +2,95 @@
 /**
  * Configuration du module DzTask
  *
- * Si vous avez un dossier ./config/autoload/ dans votre projet, vous pouvez
+ * Si vous avez un dossier ./config/autoload/ dans votre tâche, vous pouvez
  * y mettre ce fichier de configuration et changer les valeurs selon vos besoins.
  */
 $settings = array(
+    /**
+     * Utiliser le paramètre redirect s'il est présent
+     *
+     * Après un ajout avec succès, vérifie s'il y a un paramètre
+     * redirect de type GET out POST
+     *
+     * Valeurs acceptées: booléen true ou false
+     */
+    'use_redirect_parameter_if_present' => true,
+
     /**
      * Nom de la classe d'entité tache
      *
      * Nom de la classe d'entité à utiliser. Utile si vous voulez utiliser votre
      * propre classe d'entité au lieu de la classe par défaut.
-     * La classe par défaut est DzTask\Entity\Task.
-     * La classe d'entité doit implémenter DzTask\Entity\TaskInterface
+     * La classe par défaut est DzTaskModule\Entity\Task.
+     * La classe d'entité doit implémenter DzTaskModule\Entity\TaskInterface
      */
-    'task_entity_class' => 'DzTask\Entity\Task',
+    'task_entity_class' => 'DzTaskModule\Entity\Task',
+
+    /**
+     * Nom de la classe d'entité état de tâche
+     *
+     * Nom de la classe d'entité à utiliser. Utile si vous voulez utiliser votre
+     * propre classe d'entité au lieu de la classe par défaut.
+     * La classe par défaut est DzTaskModule\Entity\TaskState.
+     * La classe d'entité doit implémenter DzTaskModule\Entity\TaskStateInterface
+     */
+    'task_state_entity_class' => 'DzTaskModule\Entity\TaskState',
+
+    /**
+     * Définit le template de vue pour le widget de listing des tâches
+     *
+     * Valeur par défaut: 'dz-task-module/task/list.phtml'
+     * Valeurs acceptées: (chaine de caractère) chemin vers un script de vue
+     */
+    'task_list_widget_view_template' => 'dz-task-module/task/list.phtml',
+
+    /**
+     * Définit le template de vue pour le widget d'affichage du formulaire d'ajout de tâche
+     *
+     * Valeur par défaut: 'dz-task-module/task/add.phtml'
+     * Valeurs acceptées: (chaine de caractère) chemin vers un script de vue
+     */
+    'task_add_widget_view_template' => 'dz-task-module/task/add.phtml',
+
+    /**
+     * Définit le template de vue pour le widget d'affichage du formulaire de suppression de tâche
+     *
+     * Valeur par défaut: 'dz-task-module/task/delete.phtml'
+     * Valeurs acceptées: (chaine de caractère) chemin vers un script de vue
+     */
+    'task_delete_widget_view_template' => 'dz-task-module/task/delete.phtml',
+
+    /**
+     * Définit le template de vue pour le widget de changement d'état de tâche
+     *
+     * Valeur par défaut: 'dz-task-module/task/changestate.phtml'
+     * Valeurs acceptées: (chaine de caractère) chemin vers un script de vue
+     */
+    'task_changestate_widget_view_template' => 'dz-task-module/task/changestate.phtml',
+
+    /**
+     * Afficher ou non les actions de suppression de tâche
+     * dans le listing des tâches
+     *
+     * Mettre à false si on veut retirer la possibilité de supprimer
+     * une tâche depuis le listing tâche
+     * 
+     * Valeur par défaut: true
+     * Valeurs acceptées: booléen true ou false
+     */
+    'task_list_has_delete_action' => true,
+
+    /**
+     * Afficher ou non l'action d'ajout de tâche
+     * dans le listing des tâches
+     *
+     * Mettre à false si on veut retirer la possibilité d'ajouter
+     * une tâche depuis le listing tâche
+     * 
+     * Valeur par défaut: true
+     * Valeurs acceptées: booléen true ou false
+     */
+    'task_list_has_add_action' => true,
 );
 
 /**

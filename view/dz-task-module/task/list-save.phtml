@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * Vue pour l'action TaskController::listAction()
+ *
+ * PHP version 5
+ *
+ * @category   Source
+ * @package    DzTaskModule
+ * @subpackage View
+ * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
+ */
+
+?>
+
+<?php
+
+echo $this->setHeadTitle("Liste des tâches");
+echo $this->renderTitle("Liste des tâches");
+echo $this->renderAddWindowJs();
+
+// Bouton d'ajout de tâche affiché ou non
+if ($this->hasAddAction) {
+    ?>
+<button class="btn btn-primary btn-lg addAction" data-toggle="modal" data-target="#addTaskModal">Add</button>
+
+<div class="modal" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addTaskModalLabel">Ajout d'une tâche</h4>
+            </div>
+            <div class="modal-body">
+                <?php
+
+                echo $this->renderAddWidget();
+                
+                ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="$('#addTaskModal form').submit()">Nouveau</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <?php
+} ?>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <?php
+
+                echo $this->renderHeadings();
+
+                ?>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+
+            echo $this->renderEntries();
+
+            ?>
+        </tbody>
+    </table>
+</div>
+
+<?php
+
+// Fenêtres Modal Bootstrap de suppression des tâches
+if ($this->hasDeleteAction) {
+    
+    foreach ($this->tasks as $task) {
+        $id = $task['task_id'];
+
+        ?>
+<div class="modal fade" id="deleteTaskModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="deleteTaskModalLabel<?php echo $id; ?>" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h4 class="modal-title" id="deleteTaskModalLabel<?php echo $id; ?>">Supprimer une tâche</h4>
+            </div>
+            <div class="modal-body">
+                <?php
+
+                echo $this->renderDeleteWidget($id);
+
+                ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="$('#deleteTaskModal<?php echo $id; ?> form').submit()">Supprimer</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <?php
+    }
+} ?>

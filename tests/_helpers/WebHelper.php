@@ -2,20 +2,23 @@
 
 /**
  * Aides pour les tests d'acceptation
- * 
+ *
  * PHP version 5.4.0
  *
  * @category   Test
- * @package    DzTask
+ * @package    DzTaskModule
  * @subpackage Helper
  * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
- * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link       https://github.com/dieze/DzTask/blob/master/tests/_helpers/WebHelper.php
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
  */
 
 namespace Codeception\Module;
 
-use DzTask\Test\Helper\WebHelperDbTrait;
+use Codeception\Module;
+
+use DzTaskModule\Test\Helper\DbWebHelper;
+use DzTaskModule\Test\Helper\DbWebHelperInterface;
 
 /**
  * Classe helper pour les tests d'acceptaion.
@@ -25,10 +28,52 @@ use DzTask\Test\Helper\WebHelperDbTrait;
  * @package    DzTask
  * @subpackage Helper
  * @author     Adrien Desfourneaux (aka Dieze) <dieze51@gmail.com>
- * @license    http://opensource.org/licenses/GPL-2.0 GNU General Public License, version 2
- * @link       https://github.com/dieze/DzTask/blob/master/tests/_helpers/WebHelper.php
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       https://github.com/dieze/DzTaskModule
  */
-class WebHelper extends \Codeception\Module
+class WebHelper extends Module implements DbWebHelperInterface
 {
-    use WebHelperDbTrait;
+	/**
+     * Helper pour les méthodes de Db.
+     *
+     * @var DbWebHelper
+     */
+    protected $dbHelper;
+
+    /**
+     * Initialisation du Helper.
+     *
+     * @return void
+     */
+    public function _initialize()
+    {
+        parent::_initialize();
+
+        $dbModule = $this->getModule('Db');
+        $this->dbHelper = new DbWebHelper($dbModule);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function haveDefaultTaskStatesInDatabase()
+    {
+    	return $this->dbHelper->haveDefaultTaskStatesInDatabase();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function haveDefaultTasksInDatabase()
+    {
+    	return $this->dbHelper->haveDefaultTasksInDatabase();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function haveAllTaskDefaultsInDatabase()
+    {
+    	return $this->dbHelper->haveAllTaskDefaultsInDatabase();
+    }
 }
