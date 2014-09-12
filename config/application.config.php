@@ -28,6 +28,8 @@ if (is_dir(__DIR__ . '/../vendor')) {
 
 return array(
     'modules' => array(
+        'DzAssetModule',
+        
         'DoctrineModule',
         'DoctrineORMModule',
         'DzMessageModule',

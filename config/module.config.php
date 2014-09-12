@@ -37,6 +37,11 @@ return array(
             'dztask' => __DIR__ . '/../view',
         ),
     ),
+    'assets' => array(
+        'paths' => array(
+            'dztask' => __DIR__ . '/../public',
+        ),
+    ),
     'router' => array(
         'routes' => array(
 
