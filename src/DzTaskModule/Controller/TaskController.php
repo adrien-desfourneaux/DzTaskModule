@@ -351,7 +351,7 @@ class TaskController extends AbstractActionController
         switch ($page)
         {
             case 'index':
-                return new ViewModel();
+                return $this->viewmodel('DzTaskModule\IndexViewModel');
                 break;
 
             case 'add':

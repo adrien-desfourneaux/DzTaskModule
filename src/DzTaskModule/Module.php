@@ -134,6 +134,7 @@ class Module implements
     {
         return array(
             'invokables' => array(
+                'DzTaskModule\IndexViewModel'       => 'DzTaskModule\View\Model\IndexViewModel',
                 'DzTaskModule\AddViewModel'         => 'DzTaskModule\View\Model\AddViewModel',
                 'DzTaskModule\DeleteViewModel'      => 'DzTaskModule\View\Model\DeleteViewModel',
                 'DzTaskModule\ListViewModel'        => 'DzTaskModule\View\Model\ListViewModel',
