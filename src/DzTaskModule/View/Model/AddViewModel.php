@@ -36,6 +36,26 @@ class AddViewModel extends ViewModel
      * {@inheritdoc}
      */
     protected $template = 'dz-task-module/task/add.phtml';
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $assets = array(
+        'head' => array(
+            'css' => array(
+                '/dztask/vendor/bootstrap/dist/css/bootstrap.min.css',
+                '/dztask/css/dztask.css',
+            ),
+            'js' => array(
+                '/dztask/js/modernizr.min.js',
+            ),
+        ),
+        'foot' => array(
+            'js' => array(
+                '/dztask/js/datepicker.js',
+            ),
+        ),
+    );
     
     /**
      * {@inheritdoc}
@@ -65,7 +85,7 @@ class AddViewModel extends ViewModel
      *
      * @return void
      */
-    public function includeAssets()
+    /*public function includeAssets()
     {
         $appendScriptsHelper      = $this->helper('appendScripts');
         $prependStylesheetsHelper = $this->helper('prependStylesheets');
@@ -73,7 +93,7 @@ class AddViewModel extends ViewModel
         // Chargement des library
         $appendScriptsHelper('modernizr.js');
         $prependStylesheetsHelper('//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css', '');
-    }
+    }*/
 
     /**
      * Effectue le rendu du Javascript pour le DatePicker.

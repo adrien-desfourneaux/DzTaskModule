@@ -42,6 +42,28 @@ class ListViewModel extends ViewModel
     /**
      * {@inheritdoc}
      */
+    protected $assets = array(
+        'head' => array(
+            'css' => array(
+                '/dztask/css/dztask.css',
+                '/dztask/vendor/bootstrap/dist/css/bootstrap.min.css',
+            ),
+            'js' => array(
+                '/dztask/vendor/jquery/jquery.min.js',
+                '/vendor/underscore/underscore-min.js',
+                '/vendor/bootstrap-calendar/js/calendar.js',
+            ),
+        ),
+        'foot' => array(
+            'js' => array(
+                '/dztask/js/calendar.js',
+            ),
+        ),
+    );
+
+    /**
+     * {@inheritdoc}
+     */
     protected $defaults = array(
         'hasTitle'        => true,
         'hasAddAction'    => true,
