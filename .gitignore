@@ -5,3 +5,4 @@ metrics/
 coverage
 composer.phar
 vendor
+node_modules
